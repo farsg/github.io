@@ -10,21 +10,22 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #0b0c10;
+            background-color: #1a1a1a;
             color: #fff;
         }
         header {
-            background-color: #1f2833;
-            color: #fff;
+            background-color: #ffb703;
+            color: #000;
             text-align: center;
             padding: 40px 20px;
+            border-bottom: 4px solid #7f8c8d;
         }
         h1 {
             font-size: 48px;
             margin: 0;
         }
         nav {
-            background-color: #45a29e;
+            background-color: #7f8c8d;
             color: #fff;
             text-align: center;
             padding: 10px 0;
@@ -38,45 +39,42 @@
             transition: background-color 0.3s;
         }
         nav a:hover {
-            background-color: #66fcf1;
+            background-color: #ffb703;
         }
         .portfolio {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            grid-gap: 20px;
-            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px;
         }
         .portfolio-item {
-            background-color: #1f2833;
+            background-color: #ff5252;
             padding: 20px;
-            border-radius: 20px;
+            border-radius: 50%;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s;
-            cursor: pointer;
+            margin: 20px;
+            width: 200px;
+            text-align: center;
         }
         .portfolio-item:hover {
-            transform: scale(1.05);
+            transform: translateY(-5px);
         }
         .portfolio-item h3 {
             margin-top: 0;
             font-size: 24px;
+            color: #fff;
         }
         .portfolio-item img {
             max-width: 100%;
             border-radius: 50%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s;
-        }
-        .portfolio-item img:hover {
-            transform: scale(1.2);
         }
         .example {
-            background-color: #66fcf1;
-            color: #0b0c10;
+            background-color: #2ecc71;
+            color: #fff;
             text-align: center;
             padding: 60px 20px;
-            border-top: 2px solid #45a29e;
-            border-bottom: 2px solid #45a29e;
             border-radius: 20px;
             margin: 40px 20px;
             position: relative;
@@ -84,10 +82,12 @@
         .example h2 {
             font-size: 36px;
             margin-bottom: 20px;
+            color: #fff;
         }
         .example p {
             font-size: 18px;
             line-height: 1.6;
+            color: #fff;
         }
         .shape {
             position: absolute;
@@ -95,7 +95,7 @@
             left: 0;
             width: 120%;
             height: 50px;
-            background-color: #1f2833;
+            background-color: #ff5252;
             transform: rotate(-2deg);
             z-index: -1;
         }
