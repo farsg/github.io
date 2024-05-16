@@ -10,38 +10,21 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000;
+            background-color: #0b0c10;
             color: #fff;
         }
         header {
             background-color: #1f2833;
             color: #fff;
             text-align: center;
-            padding: 20px;
-            position: relative;
+            padding: 40px 20px;
         }
         h1 {
-            font-size: 36px;
+            font-size: 48px;
             margin: 0;
         }
-        .nav-buttons {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-        .nav-buttons a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin-right: 10px;
-            border-radius: 20px;
-            transition: background-color 0.3s;
-        }
-        .nav-buttons a:hover {
-            background-color: #45a29e;
-        }
         nav {
-            background-color: #0b0c10;
+            background-color: #45a29e;
             color: #fff;
             text-align: center;
             padding: 10px 0;
@@ -55,26 +38,24 @@
             transition: background-color 0.3s;
         }
         nav a:hover {
-            background-color: #1f2833;
+            background-color: #66fcf1;
         }
         .portfolio {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
             padding: 40px 20px;
         }
         .portfolio-item {
-            background-color: #45a29e;
+            background-color: #1f2833;
             padding: 20px;
             border-radius: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s;
-            margin-bottom: 40px;
-            width: 45%;
-            max-width: 300px;
+            cursor: pointer;
         }
         .portfolio-item:hover {
-            transform: translateY(-5px);
+            transform: scale(1.05);
         }
         .portfolio-item h3 {
             margin-top: 0;
@@ -82,48 +63,47 @@
         }
         .portfolio-item img {
             max-width: 100%;
-            border-radius: 10px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
         }
-        .about {
-            background-color: #1f2833;
-            color: #fff;
+        .portfolio-item img:hover {
+            transform: scale(1.2);
+        }
+        .example {
+            background-color: #66fcf1;
+            color: #0b0c10;
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
             border-top: 2px solid #45a29e;
             border-bottom: 2px solid #45a29e;
+            border-radius: 20px;
+            margin: 40px 20px;
+            position: relative;
         }
-        .about h2 {
+        .example h2 {
             font-size: 36px;
             margin-bottom: 20px;
         }
-        .about p {
+        .example p {
             font-size: 18px;
             line-height: 1.6;
         }
-        .contact {
-            background-color: #0b0c10;
-            color: #fff;
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 2px solid #45a29e;
-        }
-        .contact h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        .contact p {
-            font-size: 18px;
-            line-height: 1.6;
+        .shape {
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 120%;
+            height: 50px;
+            background-color: #1f2833;
+            transform: rotate(-2deg);
+            z-index: -1;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Portfólio de [Seu Nome]</h1>
-        <div class="nav-buttons">
-            <a href="sobre.html">Sobre Mim</a>
-            <a href="contato.html">Contato</a>
-        </div>
     </header>
     <nav>
         <a href="#portfolio">Portfólio</a>
@@ -139,15 +119,37 @@
             <img src="imagens/face.png" alt="Descrição da imagem">
             <p>Descrição ou título da animação/modelo</p>
         </div>
+        <div class="portfolio-item">
+            <h3>Exemplo 3</h3>
+            <img src="imagens/face.png" alt="Descrição da imagem">
+            <p>Descrição ou título da animação/modelo</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Exemplo 4</h3>
+            <img src="imagens/face.png" alt="Descrição da imagem">
+            <p>Descrição ou título da animação/modelo</p>
+        </div>
         <!-- Adicione mais itens conforme necessário -->
     </section>
-    <section class="about" id="about">
-        <h2>Sobre Mim</h2>
-        <p>Olá! Sou [Seu Nome] e estou aqui para levar você a uma jornada incrível através do mundo do design 3D, inspirado pela galáxia de Star Wars.</p>
+    <section class="example" id="example1">
+        <div class="shape"></div>
+        <h2>Exemplo 1</h2>
+        <p>Descrição do exemplo 1.</p>
     </section>
-    <section class="contact" id="contact">
-        <h2>Contato</h2>
-        <p>Você pode entrar em contato comigo através do seguinte email: <a href="mailto:seuemail@example.com">seuemail@example.com</a></p>
+    <section class="example" id="example2">
+        <div class="shape"></div>
+        <h2>Exemplo 2</h2>
+        <p>Descrição do exemplo 2.</p>
+    </section>
+    <section class="example" id="example3">
+        <div class="shape"></div>
+        <h2>Exemplo 3</h2>
+        <p>Descrição do exemplo 3.</p>
+    </section>
+    <section class="example" id="example4">
+        <div class="shape"></div>
+        <h2>Exemplo 4</h2>
+        <p>Descrição do exemplo 4.</p>
     </section>
 </body>
 </html>
